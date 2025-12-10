@@ -1,0 +1,404 @@
+/* Mobile-First CSS Improvements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Touch-friendly buttons and inputs */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+input,
+textarea,
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #0056b3 0%, #004085 100%);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.btn-secondary:hover {
+  background: #545b62;
+}
+
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+  color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: white;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #007bff;
+  color: #007bff;
+}
+
+.btn-outline:hover {
+  background: #007bff;
+  color: white;
+}
+
+/* Form Elements */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333;
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  background: #fafafa;
+  transition: all 0.3s;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #007bff;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
+/* Loading States */
+.loading {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Price Styling */
+.price {
+  font-weight: bold;
+}
+
+.price-original {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 10px;
+}
+
+.price-final {
+  color: #e44d26;
+  font-size: 1.2em;
+}
+
+.price-discount {
+  color: #28a745;
+  font-weight: bold;
+}
+
+/* Rating */
+.rating {
+  color: #ffc107;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-count {
+  color: #666;
+  font-size: 0.9em;
+  margin-left: 8px;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge-primary {
+  background: #007bff;
+  color: white;
+}
+
+.badge-success {
+  background: #28a745;
+  color: white;
+}
+
+.badge-danger {
+  background: #dc3545;
+  color: white;
+}
+
+.badge-warning {
+  background: #ffc107;
+  color: #333;
+}
+
+/* Utilities */
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mb-0 { margin-bottom: 0 !important; }
+.mb-10 { margin-bottom: 10px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+
+.mt-0 { margin-top: 0 !important; }
+.mt-10 { margin-top: 10px !important; }
+.mt-20 { margin-top: 20px !important; }
+.mt-30 { margin-top: 30px !important; }
+
+.p-0 { padding: 0 !important; }
+.p-10 { padding: 10px !important; }
+.p-20 { padding: 20px !important; }
+.p-30 { padding: 30px !important; }
+
+.d-none { display: none !important; }
+.d-block { display: block !important; }
+.d-flex { display: flex !important; }
+.d-grid { display: grid !important; }
+
+/* Mobile-specific utilities */
+.mobile-only {
+  display: none !important;
+}
+
+.desktop-only {
+  display: block !important;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.95rem;
+  }
+  
+  .mobile-only {
+    display: block !important;
+  }
+  
+  .desktop-only {
+    display: none !important;
+  }
+  
+  /* Hide scrollbar on mobile */
+  .scroll-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scroll-container::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 12px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+  
+  .form-control {
+    padding: 12px 14px;
+    font-size: 0.95rem;
+  }
+
+  /* Mobile-Specific Improvements */
+
+/* Prevent horizontal scroll */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  /* Increase tap targets */
+  button, 
+  .btn,
+  .header-action,
+  .mobile-menu-item,
+  .mobile-category-item {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove hover effects on touch */
+  button:hover,
+  .btn:hover,
+  .header-action:hover {
+    transform: none !important;
+  }
+  
+  /* Add active states */
+  button:active,
+  .btn:active,
+  .mobile-menu-item:active {
+    opacity: 0.7;
+    transform: scale(0.98);
+  }
+}
+
+/* Safe area insets for modern phones */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: min(0px, env(safe-area-inset-left));
+    padding-right: min(0px, env(safe-area-inset-right));
+    padding-top: min(0px, env(safe-area-inset-top));
+    padding-bottom: min(0px, env(safe-area-inset-bottom));
+  }
+}
+
+/* Improve scrolling performance */
+* {
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Disable pull-to-refresh on mobile */
+body {
+  overscroll-behavior-y: none;
+}
+
+/* Improve image loading */
+img {
+  content-visibility: auto;
+}
+
+/* Optimize animations for mobile */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+}
